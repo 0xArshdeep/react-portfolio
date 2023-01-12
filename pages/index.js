@@ -1,6 +1,11 @@
-import Head from 'next/head'
+import Head from 'next/head';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
-import { AiFillTwitterCircle, AiFillLinkedin, AiFillYoutube } from 'react-icons/ai'
+import { AiFillTwitterCircle, AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
+import Image from 'next/image';
+import deved from '../public/dev-ed-wave.png';
+import design from '../public/design.png';
+import code from '../public/code.png';
+import consulting from '../public/consulting.png';
 
 export default function Home() {
   return (
@@ -32,9 +37,40 @@ export default function Home() {
             </p>
           </div>
           <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600'>
-            <AiFillLinkedin />
-            <AiFillTwitterCircle />
-            <AiFillYoutube />
+            <AiFillLinkedin className='cursor-pointer' />
+            <AiFillTwitterCircle className='cursor-pointer' />
+            <AiFillYoutube className='cursor-pointer' />
+          </div>
+          <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden'>
+            <Image src={deved} layout='fill' objectFit='cover' />
+          </div>
+        </section>
+
+        <section>
+          <div>
+            <h3 className='text-3xl py-1'>A Little About Me...</h3>
+            <p className='text-md py-2 leading-8 text-gray-800'>
+              Lorem ipsum Lorem <span className='text-teal-500'>ipsum</span> Lorem ipsum Lorem ipsum Lorem ipsum
+              Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum
+            </p>
+            <p className='text-md py-2 leading-8 text-gray-800'>
+              Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+              Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum
+            </p>
+          </div>
+          <div>
+            <div className='text-center shadow-lg p-10 rounded-xl my-10'>
+              <Image src={design} width={100} height={100} />
+              <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
+              <p className='py-2'>
+                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+                Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum
+              </p>
+              <h4 className='py-4 text-teal-600'>Design tools I use</h4>
+              <p className='text-gray-800 py-1'>Photoshop</p>
+              <p className='text-gray-800 py-1'>Illustrator</p>
+              <p className='text-gray-800 py-1'>Figma</p>
+            </div>
           </div>
         </section>
       </main>
